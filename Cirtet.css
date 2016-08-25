@@ -1,0 +1,101 @@
+
+@font-face {
+    font-family: champ;
+    src: url(fonts/Adolphus%20Serif.ttf);
+}
+
+p,h1,label,h3{
+    font-family: champ;
+}
+
+body{
+    margin: 0;
+    background-color: #ffffff;
+}
+table{
+    position: relative;
+    left: 550px;
+    margin: -0px;
+}
+
+td {
+	width: 23px;
+	height: 23px;
+	border: 1px solid #919191;
+    border-radius: 15px;
+    box-shadow: inset 0 1px 2px grey;
+    
+}
+
+#form1 button{
+    position: relative;
+    bottom: 65px;
+    width: 190px;
+    height: 30px;
+    top: 20px;
+    left: 82px;
+    margin: 15px;
+    
+
+}
+
+tr{
+    background-color: #cccccc;
+    border-radius: 15px;
+}
+
+button{
+    display: block;
+    width: 140px;
+    height: 100px;
+    position: relative;
+    left: 60px;
+    top: 70px;
+}
+
+#options p{
+
+    width: 40px;
+    position: relative;
+    left: 220px;
+    font-size: 40px;
+    bottom: 38px;
+    
+    
+}
+
+#options h3{
+    
+    position: relative;
+    bottom: 170px;
+    font-size: 15px;
+    text-align: center;
+}
+
+#options {
+margin: 0;
+position: relative;
+left: 500px;
+top: 100px;
+height: 400px;
+width: 400px;
+background-color: white;
+border: 1px solid grey;
+box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+#Again {
+    height: 200px;
+    width: 200px;
+    float: left;
+    position: absolute;
+    left: 350px;
+    bottom: 400px;
+}
+
+#Again button{
+    height: 100px;
+    width: 100px;
+    margin-bottom: 15px;
+    
+}
