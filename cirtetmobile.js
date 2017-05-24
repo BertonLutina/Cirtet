@@ -5,6 +5,10 @@ var kleur = kolor[Rnumbers];
 
 var SpelTetris = {};
 
+
+// swipeup, swipedown
+
+
 //Speel veld aanmaken
 
 
@@ -23,7 +27,7 @@ SpelTetris.HuidigeVorm = 'Z';
 SpelTetris.Coor;
 
 
-//Hier maak ik mijn eerste door de cellen te vullen met een kleur
+//Hier maak ik mijn eerste blok door de cellen te vullen met een kleur
 SpelTetris.Blok = function(coordinates,color){
 	for(var i=0;i<coordinates.length;i++){
 		var rij = coordinates[i].rij;
@@ -242,27 +246,100 @@ $(document).ready(function(){
     /*$global**/
     
 var zwaarteKracht;
-$('#Again').hide();
+    
+    // geluid van het spel 
+var introductiemuziek = document.createElement('audio');
+    introductiemuziek.setAttribute('src', 'https://www.soundjay.com/free-music/cautious-path-01.mp3');
+    introductiemuziek.addEventListener('ended', function() {
+        this.play();
+    }, false);
+    
+var startmuziek  = document.createElement('audio');
+    
+    startmuziek.setAttribute('src', 'https://www.soundjay.com/free-music/midnight-ride-01a.mp3');
+    startmuziek.addEventListener('ended', function() {
+        this.play();
+    }, false);
+    
+
+var swipesound  = document.createElement('audio');
+    swipesound.setAttribute('src', 'http://soundbible.com/grab.php?id=2068&type=mp3');
+
+var swipeup  = document.createElement('audio');
+    swipeup.setAttribute('src', 'http://free-sounds.net/sound-files/special-effects/POP.WAV');
+    
+var level1Sound  = document.createElement('audio');
+    level1Sound.setAttribute('src', 'https://www.soundjay.com/free-music/barn-beat-01.mp3');
+    
+    level1Sound.addEventListener('ended', function() {
+        this.play();
+    }, false);
+    
+var level2Sound  = document.createElement('audio');
+    level2Sound.setAttribute('src', 'https://www.soundjay.com/free-music/iron-man-01.mp3');
+    
+    level2Sound.addEventListener('ended', function() {
+        this.play();
+    }, false);
+    
+var level3Sound  = document.createElement('audio');
+    level3Sound.setAttribute('src', 'https://www.soundjay.com/free-music/jungle-run-01.mp3');
+    
+    level3Sound.addEventListener('ended', function() {
+        this.play();
+    }, false);
+    
+
+
     
     
+    
+    
+    
+    
+    
+   
+$('#Again').hide();;
 $('#start').click(function(){
+    startmuziek.volume= .5;
+    startmuziek.play();
+    
     startspel(400);
+  
+    
                             });
    
 $('#level1').click(function(){
+    
         startspel(300);
+    level1Sound.volume = .5;
+    level1Sound.play();
+    $("tr").css({'background-color':'rgba(181, 181, 181, 0.6)'});
  });
 $('#level2').click(function(){
+   
         startspel(200);
+    level2Sound.volume = .5;
+    level2Sound.play();
+    $("tr").css({'background-color':'rgba(136, 136, 136, 0.6)'});
+    
  });
 $('#level3').click(function(){
         startspel(100);
+    level3Sound.volume = .5;
+    level3Sound.play();
+    $("tr").css({'background-color':'rgba(123, 123, 123, 0.6)'});
+    
+    
+    
+    
  });
     
   
 // het spel laten starten 
 function startspel(snelheid){
-    $("tr").css({'background-color':'grey'});
+    
+    $("tr").css({'background-color':'grey'}); 
     $("td").css({'background-color':kleur});
         
      $('#Again').show();
@@ -275,22 +352,32 @@ function startspel(snelheid){
     SpelTetris.veld();
 	SpelTetris.Coor = SpelTetris.Vormen(SpelTetris.HuidigeVorm,SpelTetris.model);
 	SpelTetris.Blok(SpelTetris.Coor,kleur);
-
-	$(document).keydown(function(e){
-        
-        switch(e.which){
-            case 39 : SpelTetris.bewegen('rechts'); 
-                    break;
-            case 37 : SpelTetris.bewegen('links');
-                    break;
-            case 38 : SpelTetris.rotatie(); 
-                    break;
-            case 40 : SpelTetris.vallen();
-                    break;
+    
+    $('#veld').on("swipeleft", function(event){
+        if(SpelTetris.bewegen('links')){
+          
+          swipesound.pause()
+          
+        }else{
+            SpelTetris.bewegen('links');
+            swipesound.play(); 
         }
-		
-	});
-
+        
+        
+    }).on("swiperight", function(event){
+         SpelTetris.bewegen('rechts');
+        swipesound.play();
+    }).on("swipeup", function(event){
+         SpelTetris.rotatie();
+        swipeup.play();
+    }).on("swipedown", function(event){
+         SpelTetris.vallen();
+        swipesound.play();
+    })
+            
+         
+    
+    
     zwaarteKracht = setInterval(function(){
 		SpelTetris.vallen();
 	},snelheid); 
