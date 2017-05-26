@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="nl">
-  <head>
+
+<head>
     <meta charset="utf-8">
     <meta name="description" content="Een tetris spelletje">
     <meta name="author" content="Berton Lutina Mulamba" />
@@ -8,39 +9,43 @@
     <meta name="viewport" content="width=device-width, height=device-height" />
     <script src="./js/jquery-3.1.1.js"></script>
     <title>Cirtet</title>
-    
     <link rel="stylesheet" type="text/css" href="./Cirtet.css">
     <script src="./js/jquery-3.1.1.min.js"></script>
     <script src='./Cirtet.js'></script>
-  </head>
-  <body>  
-    
+</head>
+
+<body>
     <div id="tetris">
-    <table id='veld'></table>
+        <table id='veld'></table>
+        
         <div id="Again">
-            <button type="button" id="other">RESTART</button>
+            <button type="button" class="other">RESTART</button>
+            <button type="button" class="pause">PAUSE</button>
+            <button type="button" class="stop">STOP</button>
+            <div class="scoreboard">
+            <h2>Score</h2>
+            <p class="counter">0</p>
+        </div>
         </div>
         
+        <div id="Resume">
+            <p>Do you want to resume the game?</p>
+            <button type="button" class="resumebtn">RESUME</button>
+            <p>Do you want to quite the game?</p>
+            <button type="button" class="stopbtn">STOP</button>
         </div>
-      
-      <div id="options">
-      <button type="button" form="form1" id="start" type="button">Let's go</button>
-  
-    
         
-          <p>Cirtet</p>
-          
-          
-          <div id="form1">
-              <button type="button" id="level1" > SPEED +100 </button>
-              <button type="button" id="level2"> SPEED +200 </button>
-              <button type="button" id="level3"> SPEED +300 </button>
-  
-</div>
-          <h3>Make the Game Faster <br> Choose the speed</h3>
-      </div>
-      
-      
-    
-  </body>
+    </div>
+    <div id="options">
+        <button type="button" form="form1" id="start">Let's go</button>
+        <p>Cirtet</p>
+        
+        <form id="form1">
+            <button type="button" id="level1"> SPEED +100 </button>
+            <button type="button" id="level2"> SPEED +200 </button>
+            <button type="button" id="level3"> SPEED +300 </button>
+        </form>
+        <h3>Make the Game Faster <br> Choose the speed</h3> </div>
+</body>
+
 </html>

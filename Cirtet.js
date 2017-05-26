@@ -213,7 +213,10 @@ SpelTetris.AlsOmgekeerd = function(){
 
 //Verwijder volledige rij(en)
 SpelTetris.verwijdervollerijen = function(){
+    
 	var vallens = 0;
+    var cijfer = 0;
+    
 	for (var i=21; i>=0;i--){
 		var vollerijen = true;
 
@@ -230,8 +233,17 @@ SpelTetris.verwijdervollerijen = function(){
 		}
 
 		if(vollerijen){
-			vallens++;
+            vallens++;
+            if (vallens++){
+                $('.counter').text(parseInt($('.counter').text()) + 10);
+            }
+            
+			 
+            
+          
+            
 		}
+        
 	}
 }
 
@@ -240,9 +252,12 @@ $(document).ready(function(){
     //Normale snelheid
     
     /*$global**/
-    
+var score = $('.counter').text(0); 
 var zwaarteKracht;
 $('#Again').hide();
+$('.scoreboard').hide();
+$('#Resume').hide();
+
     
     
 $('#start').click(function(){
@@ -266,11 +281,10 @@ function startspel(snelheid){
     $("td").css({'background-color':kleur});
         
      $('#Again').show();
-        $('#other').click(function(){
-           location.reload();
+        $('.scoreboard').show();
         
-        });
         $('#options').hide();
+    
         
     SpelTetris.veld();
 	SpelTetris.Coor = SpelTetris.Vormen(SpelTetris.HuidigeVorm,SpelTetris.model);
@@ -290,11 +304,34 @@ function startspel(snelheid){
         }
 		
 	});
-
+    // het vallen van de blokken per seconde
     zwaarteKracht = setInterval(function(){
 		SpelTetris.vallen();
 	},snelheid); 
+    
+    // pause van de game
+    $('.pause').click(function(){
+        if(zwaarteKracht){
+            $('#Resume').show();
+            $('#Again').hide();
+            clearInterval(zwaarteKracht);
+            }
+        });
+    
+    // verder spellen 
+    $('.resumebtn').click(function(){
+        $('#Resume').hide();
+        $('#Again').show();
         
+        zwaarteKracht = setInterval(function(){
+		SpelTetris.vallen();
+	},snelheid);
+    });
+    // stop met spellen en terug gaan de intro 
+    $('.stop').click(function(){location.reload()});
+
+    $('.stopbtn').click(function(){location.reload()});
+    
     }
    
 })

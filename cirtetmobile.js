@@ -1,3 +1,4 @@
+/*jslint node: true */
 'use strict';
 var Rnumbers = Math.floor(Math.random() * 7);
 var kolor = ['#c609c6', '#02ade0', '#1dd405', '#ebff01', '#bc6c00', '#b074f7', '#d90e16'];
@@ -6,7 +7,7 @@ var kleur = kolor[Rnumbers];
 var SpelTetris = {};
 
 
-// swipeup, swipedown
+
 
 
 //Speel veld aanmaken
@@ -235,6 +236,9 @@ SpelTetris.verwijdervollerijen = function(){
 
 		if(vollerijen){
 			vallens++;
+            if (vallens++){
+                $('.counter').text(parseInt($('.counter').text()) + 10);
+            }
 		}
 	}
 }
@@ -244,6 +248,7 @@ $(document).ready(function(){
     //Normale snelheid
     
     /*$global**/
+    
     
 var zwaarteKracht;
     
@@ -290,16 +295,10 @@ var level3Sound  = document.createElement('audio');
     }, false);
     
 
-
-    
-    
-    
-    
-    
-    
-    
    
-$('#Again').hide();;
+$('#Again').hide();
+$('.scoreboard').hide();
+$('#Resume').hide();
 $('#start').click(function(){
     startmuziek.volume= .5;
     startmuziek.play();
@@ -308,10 +307,9 @@ $('#start').click(function(){
   
     
                             });
-   
 $('#level1').click(function(){
     
-        startspel(300);
+    startspel(300);
     level1Sound.volume = .5;
     level1Sound.play();
     $("tr").css({'background-color':'rgba(181, 181, 181, 0.6)'});
@@ -341,12 +339,11 @@ function startspel(snelheid){
     
     $("tr").css({'background-color':'grey'}); 
     $("td").css({'background-color':kleur});
-        
+       
      $('#Again').show();
-        $('#other').click(function(){
-           location.reload();
-        
-        });
+    
+    $('.scoreboard').show();
+    
         $('#options').hide();
         
     SpelTetris.veld();
@@ -375,12 +372,33 @@ function startspel(snelheid){
         swipesound.play();
     })
             
-         
-    
     
     zwaarteKracht = setInterval(function(){
 		SpelTetris.vallen();
 	},snelheid); 
+    
+    // pause van de game
+    
+    $('.pause').click(function(){
+        if(zwaarteKracht){
+            $('#Resume').show();
+            $('#Again').hide();
+            clearInterval(zwaarteKracht);
+            }
+        });
+    // verder spellen 
+    $('.resumebtn').click(function(){
+        $('#Resume').hide();
+        $('#Again').show();
+        
+        zwaarteKracht = setInterval(function(){
+		SpelTetris.vallen();
+	},snelheid);
+    });
+    // stop met spellen en terug gaan de intro 
+    $('.stop').click(function(){location.reload()});
+
+    $('.stopbtn').click(function(){location.reload()}); 
         
     }
    

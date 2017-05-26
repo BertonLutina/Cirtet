@@ -1,0 +1,59 @@
+LogBoek MI2
+
+
+Datum 20/02/2017
+
+Vandaag bekeek ik alles wat ik vorig schooljaar fout had gedaan na. Daarnaast voegde ik de nieuwe jquery js-file aan mijn project. 
+ik had vandaag ook mijn setinterval functie aangepast en mijn code ook wat efficienter gemaakt.
+
+------------------------------------
+Datum 21/02/2017
+
+Nu zit ik al stap verder. Mijn setinterval bij mijn startspel werkt uitstekend. De blokken vallen en kunnen op elkaar gestapeld worden.
+
+------------------------------------
+Datum 4/03/2017
+
+Aah het denken wat ik nog kan toevoegen aan mijn spel. Paar ideeën gehad maar kon het niet uitvoeren want het werkte niet. Een beetje rond de pot zitten draaien.
+
+------------------------------------
+Datum 18/03/2017
+
+2 Weken verder. Ik had het project eenbeetje stil gelegd want ik moest veel werken buiten school. Nieuwe layout geprobeerd en buttons toegevoegd zoals "Pause", "Stop". Nadien bezig geweest aan die event van die nieuwe buttons.
+
+------------------------------------
+Datum 1/04/2017
+
+Verder gewerkt aan die event van die nieuwe buttons. Daarnaast nog een Div gemaakt voor mijn score weer te geven. Ik heb deze toegepast op mijn  op mijn functie vollerijenverwijden = $('.counter').text(parseInt($('.counter').text()) + 10);. dus telkens als er een rij volledig is krijg je 10 punten.
+
+-------------------------------------
+Datum 17/04/2017
+
+Vandaag heb ik gewerkt aan de mobiele versie van mijn spel. ik keyCode verwisselen met de swipe function. Het was makkelijk om te implementeren. Maar ik heb toch wel moeten zoeken hoe ik het moest doen. Mijn grootste fout was dat ik de js-file van mijn jQuery mobiele niet had gelinkt op mijn html. Toen ik het linkte werkte het in eens wel dus het was wel zoeken.
+
+-------------------------------------
+Datum 5/05/2017
+
+Nu heb ik twee html-files cirtetmobile.html en Cirtet.html. De Cirtet gebruikte ik om nieuwe functies te proberen zodat ik het kan implementeren in de Cirtetmobile. Na dien heb ik sounds toegevoed aan de achtergrond het spel zelfs en aan de 3 levels. Elke level heeft zijn sound. Bij de swipe heb ik ook een een geluid toegevoegd.
+
+-------------------------------------
+Datum 17/05/2017
+
+Opnieuw gewerkt aan mijn layout om het aantrekkelijk te maken en het moet gelijkt gaan met mijn concept van Cirtet. cirkel + tetris = Cirtet.
+Dus ik heb paar cirkeltjes toegevoegd aan mijn layout. Ik heb ook een beetje gewerkt aan de mediaqueries. de voor te zien aan mijn beeld responisief is.
+
+-------------------------------------
+Datum 23/05/2017
+
+De test code ,die werken op de Cirtet, heb ik geimplemeteerd in de Cirtetmobile. ik heb nog een beetje gewerkt aan mijn layout en mediaqueries. Vandaag heb ik wat ik tot nu toe heb geupload op mijn github.
+
+
+-------------------------------------
+Datum 26/05/2017
+
+Ik heb vandaag de Resume en de Stop button toegevoed. zodat een speler op Pause kan klik als hij/zij iets anders wilt doen en dan gewoon terug verder spelen. De stop knop breng u terug naar het begin. Ik heb wel problemen gehad met de restart knop dus ik heb het achtergelaten. ik ga mijn tweede versie uploaden.
+
+
+
+
+

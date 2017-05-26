@@ -22,18 +22,35 @@
 <body>
     <div id="tetris">
         <table id='veld'></table>
+        
+        
         <div id="Again">
-            <button type="button" id="other">RESTART</button>
+            
+            <button type="button" class="pause">PAUSE</button>
+            <button type="button" class="stop">STOP</button>
+            <div class="scoreboard">
+            <h2>Score</h2>
+            <p class="counter">0</p>
         </div>
+        </div>
+        
+        <div id="Resume">
+            <p>Do you want to resume the game?</p>
+            <button type="button" class="resumebtn">RESUME</button>
+            <p>Do you want to quite the game?</p>
+            <button type="button" class="stopbtn">STOP</button>
+        </div>
+            
+        
         </div>
     <div id="options">
-        <button type="button" form="form1" id="start" type="button">Let's go</button>
+        <button type="button" form="form1" id="start">Let's go</button>
         <p>Cirtet</p>
-        <div id="form1">
+        <form id="form1">
             <button type="button" id="level1"> SPEED 1 </button>
             <button type="button" id="level2"> SPEED 2 </button>
             <button type="button" id="level3"> SPEED 3 </button>
-        </div>
+        </form>
         <h3>Make it even faster choose the speed</h3> </div>
 </body>
 
