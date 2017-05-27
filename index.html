@@ -9,17 +9,23 @@
     <meta name="viewport" content="width=device-width, height=device-height" />
     <script src="./js/jquery-3.1.1.js"></script>
     <title>Cirtet</title>
-    <link rel="stylesheet" type="text/css" href="./Cirtet.css">
-    <script src="./js/jquery-3.1.1.min.js"></script>
-    <script src='./Cirtet.js'></script>
+    <link rel="stylesheet" type="text/css" href="./Cirtetmobile.css">
+    <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+   <!-- <script src="./js/jquery-3.1.1.min.js"></script> -->
+    <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+    <script src='./cirtetmobile.js'></script>
+    <script src="js/jquery.mobile-1.4.5.min.js"></script>
+    
+    
 </head>
 
 <body>
     <div id="tetris">
         <table id='veld'></table>
         
+        
         <div id="Again">
-            <button type="button" class="other">RESTART</button>
+            
             <button type="button" class="pause">PAUSE</button>
             <button type="button" class="stop">STOP</button>
             <div class="scoreboard">
@@ -34,19 +40,20 @@
             <p>Do you want to quite the game?</p>
             <button type="button" class="stopbtn">STOP</button>
         </div>
+            
         
-    </div>
+        </div>
     <div id="options">
-        <button type="button" form="form1" id="start">Let's go</button>
+        <button type="button" form="form1" id="start" type="button">Let's go</button>
         <p>Cirtet</p>
-        
-        <form id="form1">
+        <div id="form1">
             <button type="button" id="level1"> SPEED 1 </button>
             <button type="button" id="level2"> SPEED 2 </button>
             <button type="button" id="level3"> SPEED 3 </button>
-        </form>
-        <h3>Make the Game Faster choose the speed</h3> 
-    <button type="button" form="form1" id="Mobile"> Mob </button>
+             
+        </div>
+        <h3>Make it even faster choose the speed</h3> 
+   <button type="button" form="form1" id="pc">Pc </button>
     </div>
 </body>
 

@@ -332,6 +332,9 @@ $('#level3').click(function(){
     
     
  });
+$('#pc').click(function(){
+    window.location.href = "./Cirtet.html";
+});
     
   
 // het spel laten starten 

@@ -53,7 +53,9 @@ Datum 26/05/2017
 
 Ik heb vandaag de Resume en de Stop button toegevoed. zodat een speler op Pause kan klik als hij/zij iets anders wilt doen en dan gewoon terug verder spelen. De stop knop breng u terug naar het begin. Ik heb wel problemen gehad met de restart knop dus ik heb het achtergelaten. ik ga mijn tweede versie uploaden.
 
+Datum 27/05/2017
 
+Met succes beindig ik deze project. Ik hoop dat u het goed gaat vinden want ik ben heel creatief geweest en ik heb er hard aan gewerkt. het was een leuke ervaring. ik heb hier als laatst een nieuwe button eraan toegevoegd voor de mensen die Cirtet op hun pc willen spellen. nu kan je Cirtet op de pc spelen vanaf de mobile website door op de button "Pc" die rechts bovenaan staat en zelfs terug keren de het mobiel website door op de button "Mob" die je kan vinden op de normaal webiste => "Cirtet.html"
 
 
 

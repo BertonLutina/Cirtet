@@ -273,6 +273,9 @@ $('#level2').click(function(){
 $('#level3').click(function(){
         startspel(100);
  });
+$('#Mobile').click(function(){
+  window.location.href = "index.html";
+});
     
   
 // het spel laten starten 

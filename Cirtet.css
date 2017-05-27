@@ -162,6 +162,17 @@ button {
     color: #f85f5f;
 }
 
+
+#Mobile {
+    background-color: #e3e3e3;
+    width: 10%;
+    height: 10%;
+    position: absolute;
+    top: 1px;
+    left: 340px;
+}
+
+
 @media screen and (min-width: 768px) and (max-width: 1024px) { 
     td {
         width: 40px;
@@ -181,6 +192,11 @@ button {
     
     .scoreboard{
         border-radius: 40px;
+    }
+    
+    #Mobile{
+        left: 650px;
+       
     }
     
 }
@@ -255,6 +271,13 @@ button {
         width: 80px;
         border-radius: 30px
     }
+    
+     #Mobile{
+        left: 300px;
+        height: 7%;
+        width: 8%;
+        font-size: 10px;
+    }
 }
 
 @media screen and (max-width: 320px) {
@@ -307,7 +330,12 @@ button {
     #options p{
         bottom:110px;
     }
-    
+     #Mobile{
+        left: 280px;
+        height: 7%;
+        width: 8%;
+        font-size: 10px;
+    }
     
     
 }
